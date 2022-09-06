@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.latihan_navigation.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_profile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/action_home2_to_hasilHitung"
+            app:destination="@id/hasilHitung" />
+    </fragment>
+    <fragment
+        android:id="@+id/lupa_password"
+        android:name="com.example.latihan_navigation.lupa_password"
+        android:label="fragment_lupa_password"
+        tools:layout="@layout/fragment_lupa_password" />
+    <fragment
+        android:id="@+id/register2"
+        android:name="com.example.latihan_navigation.Register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register2_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/chat_cs"
+        android:name="com.example.latihan_navigation.Chat_cs"
+        android:label="fragment_chat_cs"
+        tools:layout="@layout/fragment_chat_cs" />
+    <fragment
+        android:id="@+id/help"
+        android:name="com.example.latihan_navigation.help"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.latihan_navigation.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_login_to_lupa_password"
+            app:destination="@id/lupa_password" />
+        <action
+            android:id="@+id/action_login_to_chat_cs"
+            app:destination="@id/chat_cs" />
+        <action
+            android:id="@+id/action_login_to_help"
+            app:destination="@id/help" />
+        <action
+            android:id="@+id/action_login_to_register2"
+            app:destination="@id/register2" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.latihan_navigation.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/hasilHitung"
+        android:name="com.example.latihan_navigation.HasilHitung"
+        android:label="fragment_hasil_hitung"
+        tools:layout="@layout/fragment_hasil_hitung" >
+        <argument
+            android:name="dataUmur"
+            app:argType="string" />
+        <argument
+            android:name="dataNama"
+            app:argType="string" />
+    </fragment>
+</navigation>
